@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Isso nos permitirá adicionar uma funcionalidade para limpar as notas salvas.
     const limparNotas = document.getElementById('LimparNotas');
     // Adicionamos um evento de clique ao botão de limpar notas.
+    const salvarNotas = document.getElementById('SalvarNotas');
+    // Isso nos permitirá salvar as notas manualmente, se necessário.
     limparNotas.addEventListener('click', () => {
         // Quando o botão é clicado, limpamos o conteúdo do 'blocoDeNotas'.
         blocoDeNotas.value = '';
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //     toda vez que o valor do <textarea> muda (ou seja, o usuário digita, apaga, etc).
     //   - O segundo é a FUNÇÃO que será executada quando o evento acontecer.
     //     Esta função é chamada de "callback".
-    blocoDeNotas.addEventListener('input', () => {
+    salvarNotas.addEventListener('click', () => {
         // 4. SALVANDO DADOS NO LOCALSTORAGE
         // -----------------------------------
         // Dentro da nossa função de callback, pegamos o valor atual do bloco de notas
